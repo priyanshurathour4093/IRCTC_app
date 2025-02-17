@@ -19,8 +19,8 @@ class IRCTC:
         self.fetch_data(train_no)
 
     def fetch_data(self,train_no):
-        data = requests.get("https://indianrailapi.com/api/v2/TrainSchedule/apikey/c24e7d0649d082194371d989c37473bb/TrainNumber/{}".format(train_no))
-
+        data = requests.get("https://indianrailapi.com/api/v2/TrainSchedule/apikey/<key>/TrainNumber/{}".format(train_no))
+        #<key> paste your indianrailapi key
         #for different APIs go to Indian Rail Api website (https://indianrailapi.com/) and simply sign in and paste it over in get request
 
         data = data.json()
